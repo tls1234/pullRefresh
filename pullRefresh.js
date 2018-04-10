@@ -79,11 +79,11 @@ function touchendHandle(that) {
 function transition0(that, num) {
 	if(that.option.wholePullMode) {
 		that.option.pullContainer.style.transform = 'translateY('+ num +'px)';
-		that.option.pullContainer.style.transition = 'all ' + that.option.transitionDuration + ' ' + that.option.transitionTimingFunction;
+		that.option.pullContainer.style.transition = 'all ' + that.option.transition;
 	}
 	if(that.option.loadingBoxPullMode) {
 		that.option.loadingContent.style.transform = 'translateY('+ num +'px)';
-		that.option.loadingContent.style.transition = 'all ' + that.option.transitionDuration + ' ' + that.option.transitionTimingFunction;
+		that.option.loadingContent.style.transition = 'all ' + that.option.transition;
 	}
 }
 PullRefresh.prototype.addEvent = function(el, type, fn) {
