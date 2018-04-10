@@ -72,4 +72,4 @@ var pullRefresh = new PullRefresh({
 				／／加载完成的dom操作
 			}
 		})
-    ```
+```
