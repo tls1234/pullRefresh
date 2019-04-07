@@ -54,7 +54,7 @@ function touchmoveHandle(that) {
 }
 
 function touchendHandle(that) {
-	touchend = function (e) {
+	touchend = async function (e) {
 		if(that.translateY > that.option.MaxLoadingHeight && that.flag){
 			that.flag = false;
 			//回弹动画
@@ -62,7 +62,7 @@ function touchendHandle(that) {
 			//刷新操作
 			that.option.loading();
 			//数据请求
-			that.option.ajax();
+			await that.option.ajax();
 			//刷新成功及回弹动画加入异步队列，保证在数据请求之后执行
 			var timer1 = setTimeout(function(){
 				that.option.loaded();
@@ -92,6 +92,4 @@ PullRefresh.prototype.addEvent = function(el, type, fn) {
 	} else if(el.attachEvent) {
 		el.attachEvent('on' + type, fn);
 	} else {
-		el['on' + type] = fn;
-	}
-}
+		el['on' + type]
