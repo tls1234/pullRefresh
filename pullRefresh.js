@@ -92,4 +92,6 @@ PullRefresh.prototype.addEvent = function(el, type, fn) {
 	} else if(el.attachEvent) {
 		el.attachEvent('on' + type, fn);
 	} else {
-		el['on' + type]
+		el['on' + type] = fn;
+	}
+}
