@@ -2,8 +2,8 @@
 pullRefresh.js 是一款下拉刷新插件，开放一些钩子函数，可以在刷新的各种状态中做一些操作，包括刷新中的动画及dom操作，另外开放下拉框的实时下拉数据，可以完全自定义自己的下拉组件，做出不同下拉动画效果。
 
 pullRefresh.js 支持两种下拉模式，一种是整体下拉，一种是loading框下拉，如下     
-demo1   https://htmlpreview.github.io/?https://github.com/tls1234/pullRefresh/blob/master/demo/index1.html   
-demo2   https://htmlpreview.github.io/?https://github.com/tls1234/pullRefresh/blob/master/demo/index2.html    
+demo1  https://tls1234.github.io/pullRefresh/demo1/index1   
+demo2  https://tls1234.github.io/pullRefresh/demo2/index2  
 
 # html 结构
 ```js
