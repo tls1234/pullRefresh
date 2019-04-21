@@ -42,7 +42,7 @@ var pullRefresh = new PullRefresh({
 			loadingContent: loadingContainer,　　　／／刷新框节点
 			wholePullMode: true,　　　　　　　　　　　／／整体下拉模式，如上边demo1
 			loadingBoxPullMode: false,　　　　　　　　／／刷新框下拉模式，如上边demo２
-			MaxLoadingHeight: 60,　　　　　　　　　　　／／下拉刷新的临界值
+			MaxLoadingHeight: 60,　　　　　　　　　　　／／下拉刷新的临界值和下拉框的高度一致
 			transition: '.3s ease',　　　　　　　　　　／／回弹过渡效果
 			loadingBefore: function(hasScroll) {　　／／小于刷新临界值时执行的函数，其中 hasScroll为下拉的距离，可以根据距离自定义动画效果
 				if(hasScroll < 60){　　　　　　　　　　　／／小于刷新临界值时执行
@@ -53,7 +53,7 @@ var pullRefresh = new PullRefresh({
 					flag2 = true;
 				}
 			},
-			prepareLoading: function(hasScroll) {　　／／大于刷新临界值时执行的函数，hasScroll同上
+			prepareLoading: function(hasScroll) {　　／／大于刷新临界值时执行的函数
 				if(hasScroll > 60){　　　　　　　　　　　　／／大于刷新临界值时执行
 					if(flag2 == true){　　　　　　　　　　
 						／／在这里执行dom操作
@@ -62,7 +62,7 @@ var pullRefresh = new PullRefresh({
 					flag1 = true;
 				}
 			},
-			loading: function() {
+			loading: function() {    //刷新  
 				／／刷新时的dom操作
 			},
 			ajax: function() {
